@@ -76,7 +76,7 @@ namespace AlkemyWallet.Controllers
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [HttpGet("{id}")]
-        [Authorize("Admin")]
+        [Authorize(Roles = "Admin, Regular")]
         public async Task<AccountDTO> Get(int id)
         {
             return await _accountService.GetByIdAsync(id);
@@ -102,13 +102,13 @@ namespace AlkemyWallet.Controllers
             var result = await _accountService.CreateAsync(id);
 
             if (result != null)
-                return Ok();
+                return Ok(result);
              
             return BadRequest();
         }
 
         /// <summary>
-        /// Get a paginated list of accounts. Only available for Administrators.
+        /// Update if user is locked or not. Only available for Administrators.
         /// </summary>
         /// <returns>Return a modified account object</returns>
         /// <response code="200">Success request</response>
