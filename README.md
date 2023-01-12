@@ -1,5 +1,26 @@
-# IT Bootcamp .NET eFALCOM by Alkemy C#
-El proyecto está desarrollado con Net Core 6
+# IT Bootcamp .NET eFALCOM by Alkemy
+
+## Proyecto final: Billetera Virtual "eWallet"
+
+Desarrollamos una API en C# con .NET en la cual el usuario puede realizar las siguientes funcionalidades:
+* Inicio de sesión.
+* Depósito de dinero en su cuenta.
+* Transferencia de dinero a otras cuentas.
+* Actualización y visualización de sus datos.
+
+Además, generamos un rol de administrador para aquellos usuarios autorizados a realizar tareas administrativas y de mantenimiento sobre los otros usuarios. 
+Un usuario administrador puede:
+* Crear y eliminar usuarios.
+* Actualizar y visualizar los datos de otros usuarios.
+* Actualizar, listar y eliminar transacciones realizadas por otros usuarios.
+
+Para el desarrollo de la API, utilizamos:
+* Entity Framework Core aplicando Code First.
+* Patrón Unit Of Work.
+* JWT (JSON Web Token) para manejo de sesiones.
+* Manejo de errores.
+* Swagger para documentar y realizar pruebas en la API.
+* Metodología SCRUM
 
 ## **Especificación de la Arquitectura**
 
